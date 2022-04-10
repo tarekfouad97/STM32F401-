@@ -2,13 +2,13 @@
   "configurations": [
     {
       "name": "windows-cygwin-gcc-x64",
+      "intelliSenseMode": "linux-gcc-x64",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "compilerPath": "gcc",
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "C:/cygwin64/bin/gcc.exe",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
-      "intelliSenseMode": "linux-gcc-x64",
       "compilerArgs": []
     }
   ],

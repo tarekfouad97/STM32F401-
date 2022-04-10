@@ -7,12 +7,12 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "d:/Workspace/NTI/STM32F401-drivers/GPIO",
+      "cwd": "d:/Workspace/NTI/STM32F401-drivers",
       "environment": [],
-      "program": "d:/Workspace/NTI/STM32F401-drivers/GPIO/build/Debug/outDebug",
+      "program": "d:/Workspace/NTI/STM32F401-drivers/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
+      "miDebuggerPath": "gdb",
       "externalConsole": true,
       "setupCommands": [
         {

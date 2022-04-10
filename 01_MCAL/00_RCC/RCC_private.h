@@ -6,6 +6,10 @@
 *****************************************************************/ 
 #ifndef RCC_PRIVATE_H
 #define RCC_PRIVATE_H
+
+
+#include "00_LIB/00_STD_TYPE/STD_TYPE.h"
+
 /****************************************************************
 *                             Macros                            *
 *           Base_Address is				0x40023800              *
@@ -17,7 +21,7 @@
 ****************************************************************/                       
 #define MRCC                ((RCC_TypeDef*)MRCC_BASE_ADDRESS)
 
-
+#define CSSON 19U
 
 typedef struct {
   volatile u32 CR;            /*!< RCC clock control register,                                  Address offset: 0x00 */ 
