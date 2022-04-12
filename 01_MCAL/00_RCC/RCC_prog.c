@@ -1,4 +1,8 @@
-
+/****************************************************************
+* Auther:   Tarek Fouad                                         *
+* Version:  V01                                                 *
+* Date :    11 April 2022                                       *
+*****************************************************************/
 #include "00_LIB/01_BIT_MATH/BIT_MATH.h"
 #include "00_LIB/00_STD_TYPE/STD_TYPE.h"
 
@@ -16,7 +20,10 @@
             RC
                */
 #define HSE_SRC  RC
-
+/*Options : _HSE_PLL
+            _HSI_PLL
+               */
+#define PLL_SRC  
 void MRCC_vEnableClock(BusName_t BusName,u8 Copy_u8PerNum){
 
     switch(BusName){
@@ -71,9 +78,18 @@ void MRCC_vInitSystemCLK(void){
                 SET_BIT(MRCC->CFGR,0U);
         #endif
 #elif   CLKSRC == PLL
+        #if PLL_SRC == _HSE_PLL
+
     /*SET PLLON BIT*/
-    SET_BIT(MRCC->CR,24U);
-    CLR_BIT(MRCC->CFGR,0U);
-    SET_BIT(MRCC->CFGR,1U);
+        SET_BIT(MRCC->CR,24U);
+        CLR_BIT(MRCC->CFGR,0U);
+        SET_BIT(MRCC->CFGR,1U);
+        #elif PLL_SRC == _HSI_PLL
+
+    /*SET PLLON BIT*/
+        SET_BIT(MRCC->CR,24U);
+        CLR_BIT(MRCC->CFGR,0U);
+        SET_BIT(MRCC->CFGR,1U);
+        #endif
 #endif
 }

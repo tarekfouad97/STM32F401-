@@ -1,7 +1,13 @@
+/****************************************************************
+* Auther:   Tarek Fouad                                         *
+* Version:  V01                                                 *
+* Date :    11 April 2022                                       *
+*****************************************************************/
 #ifdef  RCC_INTERFACE_H
 #define RCC_INTERFACE_H
 
-#include "00_LIB/00_STD_TYPE/STD_TYPE.h"
+#include "RCC_private.h"
+#include "RCC_config.h"
 
 typedef enum {
     AHB1 = 0,
