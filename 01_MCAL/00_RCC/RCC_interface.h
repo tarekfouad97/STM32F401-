@@ -16,8 +16,28 @@ typedef enum {
     APB2
 }BusName_t;
 
+#define HSI 0U
+#define HSE 1U
+#define PLL 2U
 
+#define _HSE_CRYSTAL 0U
+#define _HSE_RC 1U
 
+#define _PLL_HSI 0U
+#define _PLL_HSE 1U
+
+#define MCO_1_LSE 0U
+#define MCO_1_HSE 1U
+#define MCO_1_HSI 2U
+#define MCO_1_PLL 3U
+
+typedef enum {
+    MCO_1_DiV_1 =0,
+    MCO_1_DiV_2,
+    MCO_1_DiV_3,
+    MCO_1_DiV_4,
+    MCO_1_DiV_5
+}MCO_1_Pre_t;
 
 
 /************************************************************************
@@ -94,5 +114,7 @@ void MRCC_vEnableSecuritySystem(void);
 /*Function to Disable Security System*/
 void MRCC_vDisableSecuritySystem(void);
 
+void MRCC_vOutMCO_1(u8 Copy_u8MC1_0SRC );
+void MRCC_vOutMCO_1Pre(MCO_1_Pre_t Copy_tPreMco_1 );
 
 #endif /*RCC_INTERFACE_H*/
