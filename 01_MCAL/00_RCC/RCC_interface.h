@@ -116,5 +116,5 @@ void MRCC_vDisableSecuritySystem(void);
 
 void MRCC_vOutMCO_1(u8 Copy_u8MC1_0SRC );
 void MRCC_vOutMCO_1Pre(MCO_1_Pre_t Copy_tPreMco_1 );
-
+void MRCC_vInitSystemCLK_Systick(u8 Copy_u8Dev);
 #endif /*RCC_INTERFACE_H*/
