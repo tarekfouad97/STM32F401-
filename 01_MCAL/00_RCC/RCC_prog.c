@@ -12,7 +12,7 @@
 
 
 
-void MRCC_vEnableClock(BusName_t BusName,u8 Copy_u8PerNum){
+void MRCC_vEnableClock(u8 BusName,u8 Copy_u8PerNum){
 
     switch(BusName){
         case AHB1 : SET_BIT( MRCC -> AHB1ENR , Copy_u8PerNum ); break;
@@ -35,12 +35,12 @@ void MRCC_vDisableClock(BusName_t BusName,u8 Copy_u8PerNum){
 }
 
 void MRCC_vEnableSecuritySystem(void) {
-    SET_BIT(RCC_TypeDef->CR,CSSON);
+    SET_BIT(MRCC->CR,CSSON);
 }
 
 void MRCC_vDisableSecuritySystem(void) {
 
-    CLR_BIT( RCC_TypeDef->CR,CSSON );
+    CLR_BIT( MRCC->CR,CSSON );
 }
 
 void MRCC_vInitSystemCLK(void){
@@ -147,7 +147,7 @@ void MRCC_vOutMCO_1Pre(MCO_1_Pre_t Copy_tPreMco_1 ){
         SET_BIT(MRCC->CFGR,24);
         CLR_BIT(MRCC->CFGR,25);
         break;
-    case MCO_1_D,iV_4:
+    case MCO_1_DiV_4:
         SET_BIT(MRCC->CFGR,26);
         SET_BIT(MRCC->CFGR,25);
         CLR_BIT(MRCC->CFGR,24);

@@ -23,4 +23,5 @@
                _HSI_PLL
                       */
  #define PLL_SRC _HSE_PLL
-#elif
+#endif
+#endif

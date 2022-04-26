@@ -1,9 +1,9 @@
 /****************************************************************
-* Auther:   Tarek Fouad                                         *
+* Author:   Tarek Fouad                                         *
 * Version:  V01                                                 *
 * Date :    11 April 2022                                       *
 *****************************************************************/
-#ifdef  RCC_INTERFACE_H
+#ifndef  RCC_INTERFACE_H
 #define RCC_INTERFACE_H
 
 #include "RCC_private.h"
@@ -88,7 +88,7 @@ typedef enum {
 /************************************************************************
 *                           Function Prototypes                         *
 *************************************************************************/
-/*Function to Enable a specific Prepheral
+/*Function to Enable a specific Peripheral
     Options for BusName :
                         AHB1
                         AHB2
@@ -97,8 +97,8 @@ typedef enum {
     Options for Copy_u8PerNum :
                         Bus Register Macro 
 */
-void MRCC_vEnableClock(BusName_t BusName,u8 Copy_u8PerNum );
-/*Function to Disable a specific Prepheral
+void MRCC_vEnableClock(u8 BusName,u8 Copy_u8PerNum);
+/*Function to Disable a specific Peripheral
     Options for BusName :
                         AHB1
                         AHB2
@@ -113,6 +113,7 @@ void MRCC_vDisableClock(BusName_t BusName,u8 Copy_u8PerNum);
 void MRCC_vEnableSecuritySystem(void);
 /*Function to Disable Security System*/
 void MRCC_vDisableSecuritySystem(void);
+void MRCC_vInitSystemCLK(void);
 
 void MRCC_vOutMCO_1(u8 Copy_u8MC1_0SRC );
 void MRCC_vOutMCO_1Pre(MCO_1_Pre_t Copy_tPreMco_1 );
