@@ -11,7 +11,15 @@ void MEXTI_vInit(void){
    
 }
 void MEXTI_vSetSignalLatch(u8 Copy_u8EXTILine, u8 Copy_u8EXTISenseMode);
-void MEXTI_vEnableEXTI(u8 Copy_u8EXTILine);
-void MEXTI_vDisableEXTI(u8 Copy_u8EXTILine);
+
+
+void MEXTI_vEnableLine(u8 Copy_u8EXTILine){
+    SET_BIT(MEXTI->IMR,Copy_u8EXTILine);
+}
+
+void MEXTI_vDisableLine(u8 Copy_u8EXTILine){
+    CLR_BIT(MEXTI->IMR,Copy_u8EXTILine);
+}
+
 void MEXTI_vSWTrigger(u8 Copy_u8EXTILine);
 void MEXTI_vSetCallBack(void (*ptr) (void));
