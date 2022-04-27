@@ -20,7 +20,8 @@ void MNVIC_vClearPendingFlag(u8 Copy_u8IntNUM);
 u8 MNVIC_u8GetActiveFlag(u8 Copy_u8IntNUM);
 void MNVIC_VidSetPriority( s8 Copy_u8INTID , u8 Copy_u8GroupPriority , u8 Copy_u8SubPriority , u32 Copy_u8Group );
 
-
+void MNVIC_VEnablePeripheral(u8 Copy_u8IntNUM);
+void MNVIC_VDisablePeripheral(u8 Copy_u8IntNUM);
 
 
 

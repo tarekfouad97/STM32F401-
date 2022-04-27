@@ -7,13 +7,13 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "d:/Workspace/NTI/STM32F401-drivers",
+      "cwd": "d:/Workspace/NTI/STM32F401-drivers/01_MCAL/01_GPIO",
       "environment": [],
-      "program": "d:/Workspace/NTI/STM32F401-drivers/build/Debug/outDebug",
+      "program": "d:/Workspace/NTI/STM32F401-drivers/01_MCAL/01_GPIO/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "externalConsole": true,
+      "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
+      "console": "integratedTerminal",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

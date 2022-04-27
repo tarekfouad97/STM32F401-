@@ -5,7 +5,7 @@
       "intelliSenseMode": "linux-gcc-x64",
       "cStandard": "${default}",
       "cppStandard": "${default}",
-      "compilerPath": "gcc",
+      "compilerPath": "C:/cygwin64/bin/gcc.exe",
       "includePath": [
         "${workspaceFolder}/**"
       ],

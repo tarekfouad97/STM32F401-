@@ -2,8 +2,4 @@
 #define EXTI_CONFIG_H
 
 
-#define EXTI_LINE EXTI_LINE0
-
-#define EXTI_LINE FALLING_EDGE
-
 #endif
